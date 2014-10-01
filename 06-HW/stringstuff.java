@@ -4,13 +4,13 @@ public String frontTimes(String str, int n) {
   if (x > str.length()) {
     x = str.length();
   }
-  String front = str.substring(0, frontLen);
-  
-  String result = "";
-  for (int i=0; i<n; i++) {
-    result = result + front;
+  String front = str.substring(0, x);
+  String a = "";
+  int i=0;
+  for (i<n) {
+    a = a + front;
   }
-  return result;
+  return a;
 }
 
 //20 min
@@ -29,25 +29,24 @@ public String stringYak(String str) {
   String a = "";
   int x =0;
   for (x<str.length()) {
-    if (i+2<str.length() && str.charAt(i)=='y' && str.charAt(i+2)=='k') {
-      i =  i + 2;
+    if (x+2<str.length() && str.substring(x)=='y' && str.substring(x+2)=='k') {
+      x =  x + 2;
     } else {
-      a = a + str.charAt(i);
+      a = a + str.substring(x);
     }
   }
   
   return result;
 }
 
-//25 min
+//28 min
 public int stringMatch(String a, String b) {
-  int len = Math.min(a.length(), b.length());
   int x = 0;
   int i=0;
   for (i<len-1) {
     String a1 = a.substring(i, i+2);
     String b1 = b.substring(i, i+2);
-    if (aSub.equals(bSub)) {
+    if (a1.equals(b1)) {
       x=x+1;
     }
   }
