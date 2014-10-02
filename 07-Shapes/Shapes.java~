@@ -1,0 +1,9 @@
+public class Shapes{
+    
+    public String tri1(int h){
+	String a = "";
+	int x =h;
+	int a = 0;
+	while (a<=h){
+	    a=a+1;
+	    while (x)

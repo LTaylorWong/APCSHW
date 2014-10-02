@@ -1,0 +1,6 @@
+public class Driver {
+    public static void main(Sting[]args){
+	Shapes s = new Shapes ();
+	System.out.println(s.tri1(4));
+    }
+}
