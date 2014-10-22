@@ -1,0 +1,79 @@
+For Stuyablo we need:
+- Random numbers
+- User input
+
+random has function R(x) that goes through calculations and returns a number
+that appears to be random but is actually not
+
+use scanner for input
+- scanner is slow but incredibly flexible
+  - can read from a file
+    - i.e. if you have a file called myNumbers, you can read from the file using
+      the scanner
+String input = "1 fish 2 fish red fish blue fish";
+Scanner s = new Scanner(input).useDelimiter("//s*fish//s*")
+- fish acting as a comma
+Scanner s = new Scanner(input);
+System.out.println(s.next());
+- calls each successive part
+
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter a value:")
+int i = sc.nextInt();
+System.out.println(i);
+
+thread sleep can pause program for x amount of milliseconds
+System.out.println("About to do something");
+try{
+Thread.sleep(2000);
+} catch (Exception e){}
+System.out.println("Did it")
+
+while (not done){
+each player - atack
+     	    - run
+	    - spell > cast (Char other)
+	    - potion
+break :
+if (run away is successful){
+break;
+}
+breaks out of loop
+
+what used to be driver.java
+
+import java.util.*;
+public class Driver{
+       public static void main(String[]args){
+       	      Random r = new Random(10);
+	      for (int i=0;i<10;i**){
+	      	    //int val = (int)(Math.random()*100);
+		    //System.out.println(val);
+		    System.out.println(r.nextInt(100));
+	      }
+	      /*
+	      Scanner sc - new Scanner(System.in);
+	      String input = "";
+	      while (!input.equals("done")){
+	      	    System.out.println("Enter a value:");
+		    input = sc.nextLine();
+		    System.out.println(input);
+	      }
+	      */
+	      System.out.println("About to do something");
+	      try{
+		  Thread.sleep(2000);
+	      } catch (Exception e){}
+	      System.out.println("Did it");
+      }
+}
+
+abstract class
+- a class that you cannot instantiate
+- you can extend
+- CAN have abstract methods
+  - public abstract void attack(BaseChar other);
+    - this is an abstract method. It consists of the method declaration line
+      with the word abstract in it followed by a ;.
+    - any class that extends this class MUST implement all abstract methods
+      (that is, they must actually write the method to their classes)
