@@ -1,0 +1,10 @@
+public class driver{
+    public static void main(String[] args){
+	frontPiece f = new frontPiece;
+	sum13 s = new sum13;
+
+	System.out.prinln(frontPiece({1,2,3}));
+	System.out.println(sum13({1,2,2,1}));
+	System.out.println(sum13({1,2,13,2,1}));
+    }
+}
