@@ -27,7 +27,10 @@ public class Arraystuff{
 	}
 	return x;
     }
-    
+   
+ //14b
+
+
     public int sum67(int[] nums) {
 	int sum = 0;
 	for (int i = 0; i < nums.length; i++) {
