@@ -2,29 +2,30 @@ import java.util.*;
 
 public class Arraystuff{
     private int[] a;
-    private Random rnd;
-
-    public Arraystuff(int n){
-	a=new int[n];
-	for (int i=0;i<a.length;i++){
-	    a[i]=75+rnd.nextInt(76);
+    
+    public int find(int n){
+	int x =0;
+	int y=-1
+	while (x<a.length && y==-1){
+	    if (a[x].equals(n)){
+		y=x;
+	    }
+	    x=x+1;
 	}
+	return y;
+	    
     }
 
-    public Arraystuff(){
-	this(100);
-    }
-    public String toString(){
-	String s="";
-	for (int i=0;i<a.length;i++){
-	    s=s+a[i]+", ";
+    public int maxVal(){
+	int x = 0;
+	int y=1;
+	while (x<a.length){   
+	if (a[x]>a[y]){
+	    y=y+1;
 	}
-	s=s+a[a.length];
-	return s;
+	x=x+1;
+	}
+	return x;
     }
-
-    public static void main(String[]args){
-	Arraystuff as=new Arraystuff();
-	System.out.println(as);
-    }
-}
+    
+   
