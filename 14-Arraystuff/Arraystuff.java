@@ -84,4 +84,19 @@ public class Arraystuff{
 	}
 	return counter;
     }
+//------------------------    
+    public int[] seriesUp(int n) {
+   int[] result = new int[n * (n + 1) / 2];
+    int space = 0;
+    int i = 1;
+    while (i <= n + 1) {
+        for (int j = 1; j < i; j++) result[space++] = j;
+        i++;
+    }
+    return result;
+}
+
+
+
+
 
