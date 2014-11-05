@@ -94,6 +94,24 @@ public class Arraystuff{
         i++;
     }
     return result;
+
+    //-----------------
+
+    public int mode(int[] a){
+	int[] f= new int[a.maxVal];
+	for (int i=0;i<a.length;i++){
+	    freq[int[i]]+=1;
+	}
+	int x =find(f.maxVal);
+	return x;
+	
+    }
+
+
+
+
+
+
 }
 
 
