@@ -11,7 +11,7 @@ public class Driver{
 	}
 	System.out.println(i);
 
-	for(int y=0; y<i.length;y++){
+	for(int y=0; y<i.size;y++){
 	    if (i[y]==i[y+1]){
 		i.remove(y+1);
 	    }
