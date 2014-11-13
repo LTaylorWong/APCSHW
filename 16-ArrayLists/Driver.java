@@ -5,7 +5,7 @@ public class Driver{
     public static void main(String[] args){
 	ArrayList<Interger> i;
 	i = new ArrayList<Interger>();
-	Random r - new Random();
+	Random r = new Random();
 	for(int x=0;x<20;x++){
 	    i.add(r.nextInt(20));
 	}
