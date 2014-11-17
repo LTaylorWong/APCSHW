@@ -39,6 +39,8 @@ public class Mixer{
     
     public static void main(String[] args){
 	Mixer m= new Mixer(10);
+	m.Mix();
+
     }
     
 }
