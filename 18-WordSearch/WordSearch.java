@@ -29,7 +29,7 @@ public class WordSearch{
 	}
 	return s;
     }
-    
+    //-------------horizontal--------------
     public void addWordH(String w,int row, int col){
 	int r = row, c = col;
 	while (board[r][c] == "."){
@@ -44,7 +44,7 @@ public class WordSearch{
 	    }
 	}
     }
-    
+    //-------------vertical---------------  
     public  boolean yesVert(String w, int row, col){
 	int r= row, c= col;
 	boolean yes = true;
@@ -71,7 +71,7 @@ public class WordSearch{
 	    }
 	}
     }
-
+    //----------Diagonal Down Right-------------
     public boolean checkDownRight(String w, int row, int col){
 	int r = row, c =col;
 	if (row+w.length()>board.length){
@@ -89,6 +89,8 @@ public class WordSearch{
 	}
 	return true;
     }
+
+   
     public void addWordDright(String w, int row, int col){
 	int r = row, c = col;
 	while (checkDownRight(w,r,c)==true){
@@ -99,16 +101,42 @@ public class WordSearch{
 	    }
 	}
     }
+    //-----------Diagonal Down Left------------
+public boolean checkDownLeft(String w, int row, int col){
+	int r = row, c =col;
+	if (row+w.length()>board.length){
+	    return false;
+	}if (col+w.length()>board[0].length){
+	    return false;
+	}for (int i=0;i<w.length();i++){
+	    if (board[r][c]=="."){
+		if(board[r][c] != w.charAt(i)){
+		    return false;
+		}
+	    }
+	    r++;
+	    c--;
+	}
+	return true;
+    }
+
+    public void addWordDleft(String w, int row, int col){
+	int r = row, c = col;
+	while (checkDownLeft(w,r,c)==true){
+	    for (int i=0;i<w.length();i++){
+		board[r][c] = w.charAt(i);
+		r++;
+		c--;
+	    }
+	}
+    }
 
 
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	System.out.println(w);
-	w.addWordH("hello",3,5);
+      	w.addWordH("hello",3,5);
 	w.addWordH("look",3,8);
-	//w.addWordH("look",3,5);
-	//w.addWordH("hello",100,5);
-	//w.addWordH("hello",30,555);
 	w.addWordV("hi",2,3);
 	System.out.println(w);
     }
