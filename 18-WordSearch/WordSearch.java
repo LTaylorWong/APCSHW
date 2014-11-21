@@ -72,6 +72,26 @@ public class WordSearch{
 	}
     }
 
+    public boolean checkDownRight(String w, int row, int col){
+	int r = row, c =col;
+	if (row+w.length()>board.length){
+	    return false;
+	}if (col+w.length()>board[0].length){
+	    return false;
+	}for (int i=0;i<w.length();i++){
+	    if (board[r][c]=="."){
+		if(board[r][c] != w.charAt(i)){
+		    return false;
+		}
+	    }
+	    r++;
+	    c++;
+	}
+	return true;
+    }
+
+
+
     public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	System.out.println(w);
