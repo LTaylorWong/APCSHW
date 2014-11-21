@@ -89,7 +89,16 @@ public class WordSearch{
 	}
 	return true;
     }
-
+    public void addWordDright(String w, int row, int col){
+	int r = row, c = col;
+	while (checkDownRight(w,r,c)==true){
+	    for (int i=0;i<w.length();i++){
+		board[r][c] = w.charAt(i);
+		r++;
+		c++;
+	    }
+	}
+    }
 
 
     public static void main(String[] args) {
