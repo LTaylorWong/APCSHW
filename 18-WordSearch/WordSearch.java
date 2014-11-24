@@ -66,7 +66,7 @@ public class WordSearch{
     }
 
     //-------------vertical---------------  
-    public  boolean yesVert(String w, int row, col){
+    public  boolean yesVert(String w, int row, int col){
 	int r= row, c= col;
 	boolean yes = true;
 	if (row>board.length){
@@ -218,9 +218,9 @@ public class WordSearch{
 
     //------------adding words---------
     public boolean addWord(String w){
-	Random r=new random;
+	Random r=new random();
 
-	char[][] t_board=new board;
+	char[][] t_board=new board();
 	int Row = r.nextInt(board.length);
 	int Col = r.nextInt(board[0].length);
 	int  style= r.nextInt(7);
@@ -232,13 +232,13 @@ public class WordSearch{
 	} if (style == 2) {
 	    addWordV(w, Row, Col);
 	} if (style == 3){
-	    addDiagonalDright(w, Row, Col);
+	    addWordDright(w, Row, Col);
 	} if (style == 4) {
-	    addDiagonalDleft(w, Row, Col);
+	    addWordDleft(w, Row, Col);
 	} if (style == 5) {
-	    addDiagonalUright(w, Row, Col);
+	    addWordUright(w, Row, Col);
 	} if (style == 6) {
-	    addDiagonalUleft(w, Row, Col);
+	    addWordUleft(w, Row, Col);
 	}
 	if (t_board.equals(board)) {
 	    return true;
