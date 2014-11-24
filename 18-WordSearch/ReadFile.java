@@ -5,7 +5,7 @@ public class ReadFile{
     public static void main(String[]args){
 	Scanner sc=null;
 	try{
-	    sc = new Scanner(new File("words.txt"));
+	    sc = new Scanner(new File("Words.txt"));
 	    }
 	catch(Exception e){
 	    System.out.println("Can't open file");

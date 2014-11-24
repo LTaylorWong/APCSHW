@@ -2,6 +2,10 @@
  * Creates a word search puzzle
  *
  */
+
+import java.io.*;
+import java.util.*;
+
 public class WordSearch{
 
     private char[][] board;
@@ -73,10 +77,11 @@ public class WordSearch{
 	    return false;
 	}if (col> board[0].length){
 	    return false;
-	}for (int i=0;i<w.length();i++){
-	    if (board[r][c]=="."){
-		if(board[r][c] != w.charAt(i)){
-		   return false;
+	}for (int i = 0; i < w.length(); i++) {
+	    if (board[r][c] != '.') {
+		if (board[r][c] != w.charAt(i)) {
+		    return false;
+	   
 		}
 	    }
 	    r=r+1;
@@ -99,9 +104,9 @@ public class WordSearch{
 	    return false;
 	}if (col+w.length()>board[0].length){
 	    return false;
-	}for (int i=0;i<w.length();i++){
-	    if (board[r][c]=="."){
-		if(board[r][c] != w.charAt(i)){
+	}for (int i = 0; i < w.length(); i++) {
+	    if (board[r][c] != '.') {
+		if (board[r][c] != w.charAt(i)) {
 		    return false;
 		}
 	    }
@@ -129,9 +134,9 @@ public class WordSearch{
 	    return false;
 	}if (col+w.length()>board[0].length){
 	    return false;
-	}for (int i=0;i<w.length();i++){
-	    if (board[r][c]=="."){
-		if(board[r][c] != w.charAt(i)){
+	}for (int i = 0; i < w.length(); i++) {
+	    if (board[r][c] != '.') {
+		if (board[r][c] != w.charAt(i)) {
 		    return false;
 		}
 	    }
@@ -160,9 +165,9 @@ public class WordSearch{
 	    return false;
 	}if (col+w.length()>board[0].length){
 	    return false;
-	}for (int i=0;i<w.length();i++){
-	    if (board[r][c]=="."){
-		if(board[r][c] != w.charAt(i)){
+	}for (int i = 0; i < w.length(); i++) {
+	    if (board[r][c] != '.') {
+		if (board[r][c] != w.charAt(i)) {
 		    return false;
 		}
 	    }
@@ -192,9 +197,9 @@ public class WordSearch{
 	    return false;
 	}if (col+w.length()>board[0].length){
 	    return false;
-	}for (int i=0;i<w.length();i++){
-	    if (board[r][c]=="."){
-		if(board[r][c] != w.charAt(i)){
+	}for (int i = 0; i < w.length(); i++) {
+	    if (board[r][c] != '.') {
+		if (board[r][c] != w.charAt(i)) {
 		    return false;
 		}
 	    }
@@ -218,12 +223,10 @@ public class WordSearch{
 
     //------------adding words---------
     public boolean addWord(String w){
-	Random r=new random();
-
-	char[][] t_board=new board();
+	Random r=new Random();
 	int Row = r.nextInt(board.length);
 	int Col = r.nextInt(board[0].length);
-	int  style= r.nextInt(7);
+	int style= r.nextInt(7);
 
 	if (style == 0){
 	    addWordHForward(w, Row, Col);
@@ -240,17 +243,11 @@ public class WordSearch{
 	} if (style == 6) {
 	    addWordUleft(w, Row, Col);
 	}
-	if (t_board.equals(board)) {
-	    return true;
-	} else {
-	    return false;
-	}
     }
-
-
+}
     //------------main---------------
 
-    public static void main(String[] args) {
+    /*  public static void main(String[] args) {
 	WordSearch w = new WordSearch();
 	System.out.println(w);
       	w.addWordH("hello",3,5);
@@ -259,3 +256,4 @@ public class WordSearch{
 	System.out.println(w);
     }
 }
+    */
