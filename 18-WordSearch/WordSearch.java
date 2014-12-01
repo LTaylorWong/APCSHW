@@ -228,6 +228,19 @@ public class WordSearch{
 	int Col = r.nextInt(board[0].length);
 	int style= r.nextInt(7);
 
+	Scanner sc = null;
+	try{
+	    sc = new Scanner(new File("Words.txt"));
+	}
+	catch(Exception e){
+	    System.out.println("Can't open file");
+	    System.exit(0);
+	}
+	while (sc.hasNext()){
+	    String s = sc.next;
+	    System.out.println("Word"+s);
+	}
+	
 	if (style == 0){
 	    addWordHForward(w, Row, Col);
 	} if (style == 1) {
@@ -245,15 +258,15 @@ public class WordSearch{
 	}
     }
 }
-    //------------main---------------
+//------------main---------------
 
-    /*  public static void main(String[] args) {
-	WordSearch w = new WordSearch();
-	System.out.println(w);
-      	w.addWordH("hello",3,5);
-	w.addWordH("look",3,8);
-	w.addWordV("hi",2,3);
-	System.out.println(w);
+/*  public static void main(String[] args) {
+    WordSearch w = new WordSearch();
+    System.out.println(w);
+    w.addWordH("hello",3,5);
+    w.addWordH("look",3,8);
+    w.addWordV("hi",2,3);
+    System.out.println(w);
     }
-}
-    */
+    }
+*/
