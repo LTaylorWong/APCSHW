@@ -112,7 +112,11 @@ public class Sarray3 {
 
     public void ssort(){
 	for(int i=0;i<data.length;i++){
-	    for(int j=0;)
+	    String min=data[i];
+	    int index=i;
+	    for(int j=0;j<data.length;j++){
+		
+		
 
 
     
