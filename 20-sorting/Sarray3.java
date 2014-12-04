@@ -99,5 +99,22 @@ public class Sarray3 {
 	    }
 	}
     }
+
+    /*
+      selection sort:
+      i=0
+      look at the array from i to the end
+      find min
+      swap min for element i
+      i=i++
+     */
+
+
+    public void ssort(){
+	for(int i=0;i<data.length;i++){
+	    for(int j=0;)
+
+
+    
 }
 
