@@ -114,8 +114,8 @@ public class Sarray3 {
 	for(int i=0;i<data.length;i++){
 	    String min=data[i];
 	    int index=i;
-	    for(int j=0;j<data.length;j++){
-		
+	    for(int j=i;j<data.length;j++){
+		if()
 		
 
 
