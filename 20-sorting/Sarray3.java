@@ -109,15 +109,20 @@ public class Sarray3 {
       i=i++
      */
 
-
     public void ssort(){
-	for(int i=0;i<data.length;i++){
+	for (int i=0;i<data.length; i++){
 	    String min=data[i];
 	    int index=i;
-	    for(int j=i;j<data.length;j++){
-		if()
-		
-
+	    for (int j=i;j<data.length;j++){
+		if (min.compareTo(data[j])>0){    
+		min=data[j];
+		index=j;
+		}
+	    }
+	    data[index]=data[i];
+	    data[i]=min;
+	}
+    }
 
     
 }
