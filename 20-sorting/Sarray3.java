@@ -123,7 +123,4 @@ public class Sarray3 {
 	    data[i]=min;
 	}
     }
-
-    
 }
-
