@@ -1,0 +1,18 @@
+public class Searching{
+    public Comparable[]a;
+    public int last;
+
+    public Searching(int n){
+	a=new Comparable[n];
+	last = 0;
+    }
+
+    public Comparable lsearch(Comparable item){
+    }
+
+    public Comparable bsearch(Comparable item){
+    }
+
+    public Comparable rbsearch(Comparable item){
+    }
+    
