@@ -46,5 +46,30 @@ public class Searching{
     }
 
     public Comparable rbsearch(Comparable item){
+	int l=0;
+	int len=a.length;
+        if(item.compareTo(a[0])<0||item.compareTo(a[len])>0) return null;
+	else{
+	    return rbsearch(item,l, len);
+	}
     }
+
+    public Comparable rbsearch(Comparable item, int l, int len){
+	int half=(l+len)/2;
+	if (l==len)return null;
+	if(item.compareTo(a[half]!=0)){
+	    if (item.compareTo(a[half])>0){
+		l=half+1;
+		return rbsearch(item,l, len);
+	    }else{
+		len=half;
+		return rbsearch(item,l,len);
+	    }else return item;
+	}
+    }
+    //---------------Main----------------
+
+    public static void main(String[]args){
+    }
+
     
