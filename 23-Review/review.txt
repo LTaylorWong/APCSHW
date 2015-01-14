@@ -1,0 +1,5 @@
+https://github.com/jlox/apfinal
+
+-very organized
+-seems well planned out with each of its needed aspects
+-very clear of what the purpose of each class/ method is for
